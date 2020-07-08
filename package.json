@@ -1,0 +1,22 @@
+{
+  "name": "feedback-collection-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sara-bn/feedback-collection-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sara-bn/feedback-collection-app/issues"
+  },
+  "homepage": "https://github.com/sara-bn/feedback-collection-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
