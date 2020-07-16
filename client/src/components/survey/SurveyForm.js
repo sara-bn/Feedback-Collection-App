@@ -4,16 +4,11 @@ import SurveyFiled from './SurveyField';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import validateEmails from '../../utils/validateEmails';
+import formFields from './formFields';
 
-const FIELDS = [
-	{ label: 'Survey Title', name: 'title' },
-	{ label: 'Subject Line', name: 'subject' },
-	{ label: 'Email body', name: 'body' },
-	{ label: 'Recipient List', name: 'emails' },
-];
 class SurveyForm extends Component {
 	renderFields() {
-		return _.map(FIELDS, (field) => {
+		return _.map(formFields, (field) => {
 			return <Field key={field.name} component={SurveyFiled} type="text" label={field.label} name={field.name} />;
 		});
 	}
@@ -39,8 +34,8 @@ function validate(values) {
 	const errors = {};
 	//first check the emails
 	//if no email provided, emoty string will be considered
-	errors.emails = validateEmails(values.emails || '');
-	_.each(FIELDS, ({ name }) => {
+	errors.recipients = validateEmails(values.recipients || '');
+	_.each(formFields, ({ name }) => {
 		if (!values[name]) {
 			errors[name] = 'You must provide a value';
 		}
