@@ -1,4 +1,4 @@
-### feedback-collection-app
+# feedback-collection-app
 * **Back-end**: Nodejs<br/>
 * **Front-end**: React+Redux<br/>
 * **Authentication**: Google OAuth with passport.js<br />
